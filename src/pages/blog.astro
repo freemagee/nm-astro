@@ -1,0 +1,16 @@
+---
+import BaseHeader from "@components/BaseHeader.astro";
+
+let pageTitle = "######";
+let pageDescription = "#####";
+let pagePermalink = `${Astro.site.toString()}blog`;
+---
+
+<html lang="en">
+  <head>
+    <BaseHeader {{ pageTitle, pageDescription, pagePermalink }} />
+  </head>
+  <body>
+    <p>All the blogs</p>
+  </body>
+</html>

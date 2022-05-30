@@ -1,0 +1,41 @@
+---
+import { Frontmatter, Post } from "@typings";
+import Nav from "@components/Nav.astro";
+import Home from "@components/Home.astro";
+import HomeLatestPost from "@components/HomeLatestPost.astro";
+import BaseHeader from "@components/BaseHeader.astro";
+
+let pageTitle = "######";
+let pageDescription = "#####";
+let pagePermalink = Astro.site.toString();
+
+let allPosts = await Astro.glob<Frontmatter>("../pages/posts/*.md");
+allPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+const {
+  frontmatter: { title, date, description },
+  url,
+} = allPosts.slice(0, 1)[0];
+const post: Post = {
+  title,
+  date,
+  description,
+  url,
+};
+---
+
+<html lang="en">
+  <head>
+    <BaseHeader {pageTitle} {pageDescription} {pagePermalink} />
+  </head>
+  <body>
+    <Nav />
+
+    <Home />
+
+    <HomeLatestPost {...post} />
+  </body>
+</html>
