@@ -1,10 +1,10 @@
-export interface Meta {
+export interface IMeta {
   pageTitle: string;
   pageDescription: string;
   pagePermalink: string;
 }
 
-export interface Nav {
+export interface INav {
   label: string;
   url: string;
 }

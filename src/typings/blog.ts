@@ -1,15 +1,15 @@
-interface BasePost {
+interface IBasePost {
   title: string;
   date: string;
   description?: string;
 }
 
-export interface Frontmatter extends BasePost {
+export interface IFrontmatter extends IBasePost {
   layout?: string;
   categories?: string[];
   tags?: string[];
 }
 
-export interface Post extends BasePost {
+export interface IPost extends IBasePost {
   url: string;
 }
