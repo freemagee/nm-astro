@@ -1,8 +1,44 @@
 ---
-import { IFrontmatter, IPost } from "@typings";
-import Index from "../views/Index";
+import { IFrontmatter } from "@typings";
+import BaseHeader from "@components/BaseHeader";
+import Nav from "@components/Nav";
+import HomeLatestPost from "@components/HomeLatestPost";
+import { Content as Home } from "./main/index.md";
 
-const allRawPosts = await Astro.glob<IFrontmatter>("../pages/posts/*.md");
+const allPosts = await Astro.glob<IFrontmatter>("../pages/posts/*.md");
+
+const indexTitle = "Index";
+const indexDescription = "The index of the blog";
+const indexPermalink = "";
+
+const dateSortedPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
+const {
+  frontmatter: { title: latestPostTitle, date: latestPostDate },
+  url: latestPostUrl,
+} = dateSortedPosts.slice(0, 1)[0];
 ---
 
-<Index allPosts={allRawPosts} />
+<html lang="en">
+  <head>
+    <BaseHeader
+      pageTitle={indexTitle}
+      pageDescription={indexDescription}
+      pagePermalink={indexPermalink}
+    />
+  </head>
+  <body>
+    <Nav />
+
+    <Home />
+
+    <HomeLatestPost
+      title={latestPostTitle}
+      date={latestPostDate}
+      url={latestPostUrl}
+    />
+  </body>
+</html>

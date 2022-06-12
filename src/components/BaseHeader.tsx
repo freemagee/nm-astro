@@ -1,6 +1,11 @@
+import { FC } from "react";
 import { IMeta } from "@typings";
 
-const BaseHeader = ({ pageTitle, pageDescription, pagePermalink }: IMeta) => {
+const BaseHeader: FC<IMeta> = ({
+  pageTitle,
+  pageDescription,
+  pagePermalink,
+}) => {
   return (
     <>
       <title>{pageTitle}</title>

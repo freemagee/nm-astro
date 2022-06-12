@@ -3,7 +3,8 @@ import BaseHeader from "@components/BaseHeader";
 import Nav from "@components/Nav";
 import { IPost } from "@typings";
 
-const { title, description, date } = Astro.props as IPost;
+const { content } = Astro.props;
+const { title, description, date } = content as IPost;
 ---
 
 <html lang="en">

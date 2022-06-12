@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { IPost } from "@typings";
 
-const HomeLatestPost = ({ title, date, url }: IPost) => {
+const HomeLatestPost: FC<IPost> = ({ title, date, url }) => {
   return (
     <>
       <p>
