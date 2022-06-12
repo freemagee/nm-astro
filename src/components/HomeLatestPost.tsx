@@ -1,7 +1,9 @@
 import { FC } from "react";
-import { IPost } from "@typings";
+import { IPostProps } from "@typings";
 
-const HomeLatestPost: FC<IPost> = ({ title, date, url }) => {
+const HomeLatestPost: FC<IPostProps> = ({ post }) => {
+  const { title, date, url } = post;
+
   return (
     <>
       <p>

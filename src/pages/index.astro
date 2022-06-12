@@ -17,8 +17,8 @@ const dateSortedPosts = allPosts.sort(
     new Date(a.frontmatter.date).valueOf()
 );
 const {
-  frontmatter: { title: latestPostTitle, date: latestPostDate },
-  url: latestPostUrl,
+  frontmatter: { title, date },
+  url,
 } = dateSortedPosts.slice(0, 1)[0];
 ---
 
@@ -35,10 +35,6 @@ const {
 
     <Home />
 
-    <HomeLatestPost
-      title={latestPostTitle}
-      date={latestPostDate}
-      url={latestPostUrl}
-    />
+    <HomeLatestPost post={{ title, date, url }} />
   </body>
 </html>

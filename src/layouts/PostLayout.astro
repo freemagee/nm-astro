@@ -4,12 +4,15 @@ import Nav from "@components/Nav";
 import { IPost } from "@typings";
 
 const { content } = Astro.props;
-const { title, description, date } = content as IPost;
+const { title, description, date, url } = content as IPost;
 ---
 
 <html lang="en">
   <head>
-    <BaseHeader pageTitle={title} pageDescription={description} pagePermalink=""
+    <BaseHeader
+      pageTitle={title}
+      pageDescription={description}
+      pagePermalink={url}
     />
   </head>
   <body>

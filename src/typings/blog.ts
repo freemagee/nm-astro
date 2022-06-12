@@ -1,4 +1,4 @@
-interface IBasePost {
+export interface IBasePost {
   title: string;
   date: string;
   description?: string;
@@ -10,6 +10,10 @@ export interface IFrontmatter extends IBasePost {
   tags?: string[];
 }
 
-export interface IPost extends IBasePost {
-  url: string;
+export interface IPost extends IFrontmatter {
+  url?: string;
+}
+
+export interface IPostProps {
+  post: IPost;
 }

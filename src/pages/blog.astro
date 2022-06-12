@@ -1,16 +1,41 @@
 ---
+import { IFrontmatter } from "@typings";
 import BaseHeader from "@components/BaseHeader";
+import PostPreview from "@components/PostPreview";
+
+const blogTitle = "Blog";
+const blogDescription = "The blog";
+const blogPermalink = `${Astro.site.toString()}blog`;
+
+const allPosts = await Astro.glob<IFrontmatter>("../pages/posts/*.md");
+
+const dateSortedPosts = allPosts.sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+);
 ---
 
 <html lang="en">
   <head>
     <BaseHeader
-      pageTitle="Blog"
-      pageDescription="All Posts"
-      pagePermalink={`${Astro.site.toString()}blog`}
+      pageTitle={blogTitle}
+      pageDescription={blogDescription}
+      pagePermalink={blogPermalink}
     />
   </head>
   <body>
-    <p>All the blogs</p>
+    <main>
+      <section>
+        <h1>{blogTitle}</h1>
+        <p>{blogDescription}</p>
+      </section>
+      <section aria-label="Blog post list">
+        {dateSortedPosts.map((p) => <PostPreview post={{
+          ...p.frontmatter,
+          url: p.url
+        }} />)}
+      </section>
+    </main>
   </body>
 </html>
