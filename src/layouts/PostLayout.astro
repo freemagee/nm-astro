@@ -19,6 +19,6 @@ const { title, description, date, url } = content as IPost;
     <Nav />
     <h1>{title}</h1>
     <slot />
-    <p>Written on: {new Date(date).toDateString()}</p>
+    <p>Written on: {date.toDateString()}</p>
   </body>
 </html>

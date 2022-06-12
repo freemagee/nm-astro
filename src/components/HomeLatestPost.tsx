@@ -7,7 +7,7 @@ const HomeLatestPost: FC<IPostProps> = ({ post }) => {
   return (
     <>
       <p>
-        {title} on {new Date(date).toDateString()}
+        {title} on {date.toDateString()}
       </p>
       <p>
         <a href={url}>Read more</a>

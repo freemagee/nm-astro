@@ -1,6 +1,6 @@
 export interface IBasePost {
   title: string;
-  date: string;
+  date: Date;
   description?: string;
 }
 

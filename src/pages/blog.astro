@@ -1,5 +1,5 @@
 ---
-import { IFrontmatter } from "@typings";
+import { IFrontmatter, IPost } from "@typings";
 import BaseHeader from "@components/BaseHeader";
 import PostPreview from "@components/PostPreview";
 
@@ -7,13 +7,17 @@ const blogTitle = "Blog";
 const blogDescription = "The blog";
 const blogPermalink = `${Astro.site.toString()}blog`;
 
-const allPosts = await Astro.glob<IFrontmatter>("../pages/posts/*.md");
-
-const dateSortedPosts = allPosts.sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).valueOf() -
-    new Date(a.frontmatter.date).valueOf()
-);
+const allMarkdownPosts = await Astro.glob<IFrontmatter>("./**/*.md");
+const allPosts: IPost[] = allMarkdownPosts
+  .map((post) => ({
+    title: post.frontmatter.title,
+    description: post.frontmatter.description,
+    tags: post.frontmatter.tags,
+    categories: post.frontmatter.categories,
+    date: new Date(post.frontmatter.date),
+    url: post.url,
+  }))
+  .sort((a, b) => b.date.valueOf() - a.date.valueOf());
 ---
 
 <html lang="en">
@@ -31,10 +35,7 @@ const dateSortedPosts = allPosts.sort(
         <p>{blogDescription}</p>
       </section>
       <section aria-label="Blog post list">
-        {dateSortedPosts.map((p) => <PostPreview post={{
-          ...p.frontmatter,
-          url: p.url
-        }} />)}
+        {allPosts.map((post) => <PostPreview post={post} />)}
       </section>
     </main>
   </body>
