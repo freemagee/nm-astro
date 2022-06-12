@@ -1,0 +1,31 @@
+---
+import BaseHeader from "@components/BaseHeader";
+import Nav from "@components/Nav";
+import { IFrontmatter } from "@typings";
+
+export async function getStaticPaths() {
+  const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
+  const allTags = [
+    ...new Set(allMarkdownPosts.map((p) => p.frontmatter.tags).flat()),
+  ];
+  // console.log(allTags.map((tag) => ({ params: { tag } })));
+  return allTags.map((tag) => ({ params: { tag } }));
+}
+
+// const { tag } = Astro.params;
+console.log("Astro.params", Astro.params);
+---
+
+<html lang="en">
+  <head>
+    <BaseHeader
+      pageTitle={"All tags"}
+      pageDescription={"all tags"}
+      pagePermalink={""}
+    />
+  </head>
+  <body>
+    <Nav />
+    <!-- <p>{tag}</p> -->
+  </body>
+</html>

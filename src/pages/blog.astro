@@ -8,7 +8,7 @@ const blogTitle = "Blog";
 const blogDescription = "The blog";
 const blogPermalink = `${Astro.site.toString()}blog`;
 
-const allMarkdownPosts = await Astro.glob<IFrontmatter>("./**/*.md");
+const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allPosts: IPost[] = allMarkdownPosts
   .map((post) => ({
     title: post.frontmatter.title,

@@ -9,7 +9,7 @@ const indexTitle = "Index";
 const indexDescription = "The index of the blog";
 const indexPermalink = "";
 
-const allMarkdownPosts = await Astro.glob<IFrontmatter>("./**/*.md");
+const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allPosts: IPost[] = allMarkdownPosts
   .map((post) => ({
     title: post.frontmatter.title,
