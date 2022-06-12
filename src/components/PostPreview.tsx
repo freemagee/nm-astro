@@ -7,7 +7,7 @@ const PostPreview: FC<IPostProps> = ({ post }) => {
   return (
     <article>
       <header>
-        <p>{date}</p>
+        <p>{new Date(date).toDateString()}</p>
         <a href={url}>
           <h1>{title}</h1>
         </a>
