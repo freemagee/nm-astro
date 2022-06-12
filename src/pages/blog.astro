@@ -2,6 +2,7 @@
 import { IFrontmatter, IPost } from "@typings";
 import BaseHeader from "@components/BaseHeader";
 import PostPreview from "@components/PostPreview";
+import Nav from "@components/Nav";
 
 const blogTitle = "Blog";
 const blogDescription = "The blog";
@@ -29,6 +30,7 @@ const allPosts: IPost[] = allMarkdownPosts
     />
   </head>
   <body>
+    <Nav />
     <main>
       <section>
         <h1>{blogTitle}</h1>
