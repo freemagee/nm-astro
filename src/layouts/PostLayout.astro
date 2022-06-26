@@ -1,10 +1,11 @@
 ---
 import BaseHeader from "@components/BaseHeader";
 import Nav from "@components/Nav";
-import { IPost } from "@typings";
+import { AstroPostContent } from "@typings";
 
 const { content } = Astro.props;
-const { title, description, date, url } = content as IPost;
+// ! typing Astro content as IPostProps does not work. date prop is a string not a Date as expected.
+const { title, description, date, url } = content as AstroPostContent;
 ---
 
 <html lang="en">
@@ -19,6 +20,6 @@ const { title, description, date, url } = content as IPost;
     <Nav />
     <h1>{title}</h1>
     <slot />
-    <p>Written on: {date.toDateString()}</p>
+    <p>Written on: {new Date(date).toDateString()}</p>
   </body>
 </html>

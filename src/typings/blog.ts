@@ -17,3 +17,6 @@ export interface IPost extends IFrontmatter {
 export interface IPostProps {
   post: IPost;
 }
+
+// Refer to PostLayout.astro for usage
+export type AstroPostContent = Omit<IPost, "date"> & { date: string };
