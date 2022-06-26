@@ -18,8 +18,10 @@ const mainPages: INav[] = [
 const Nav = () => {
   return (
     <nav>
-      {mainPages.map((page) => (
-        <a href={page.url}>{page.label}</a>
+      {mainPages.map((page, i) => (
+        <a key={i} href={page.url}>
+          {page.label}
+        </a>
       ))}
     </nav>
   );
