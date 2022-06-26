@@ -7,13 +7,14 @@ categories:
   - development
 tags:
   - hugo
+setup: import Figure from '../../components/Figure.tsx'
 ---
 
 Today I learned a lesson that Hugo definitely wants your content in the **content/posts** directory. I learnt this by needing to make an addition to my [Hugo theme](https://github.com/freemagee/comfortable-basic) that themes this site.
 
 As I am now working from home, and have recently set my personal Mac up for local development, I used Homebrew to install Hugo. Previously I often used Hugo on my work PC. I then navigated to the local version of my TIL repo, ran `hugo server` and navigated to `localhost:1313`. What I saw was that my site was really broken.
 
-<figure><img src="/images/hugo-content-organisation/localhost.png" title="Where are my posts?" alt="An image of my broken Hugo site" loading="lazy" /><figcaption>Where are my posts?</figcaption></figure>
+<Figure src="/images/hugo-content-organisation/localhost.png" title="Where are my posts?" alt="An image of my broken Hugo site" loading="lazy" />
 
 <!--more-->
 
