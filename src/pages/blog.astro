@@ -4,9 +4,9 @@ import BaseHeader from "@components/BaseHeader";
 import PostPreview from "@components/PostPreview";
 import Nav from "@components/Nav";
 
-const blogTitle = "Blog";
-const blogDescription = "The blog";
-const blogPermalink = `${Astro.site.toString()}blog`;
+const thisTitle = "Blog";
+const thisDescription = "The blog";
+const thisPermalink = `${Astro.site.toString()}blog`;
 
 const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allPosts: IPost[] = allMarkdownPosts
@@ -24,17 +24,17 @@ const allPosts: IPost[] = allMarkdownPosts
 <html lang="en">
   <head>
     <BaseHeader
-      pageTitle={blogTitle}
-      pageDescription={blogDescription}
-      pagePermalink={blogPermalink}
+      pageTitle={thisTitle}
+      pageDescription={thisDescription}
+      pagePermalink={thisPermalink}
     />
   </head>
   <body>
     <Nav />
     <main>
       <section>
-        <h1>{blogTitle}</h1>
-        <p>{blogDescription}</p>
+        <h1>{thisTitle}</h1>
+        <p>{thisDescription}</p>
       </section>
       <section aria-label="Blog post list">
         {allPosts.map((post) => <PostPreview post={post} />)}

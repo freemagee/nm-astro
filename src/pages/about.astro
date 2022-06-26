@@ -3,17 +3,17 @@ import BaseHeader from "@components/BaseHeader";
 import Nav from "@components/Nav";
 import { Content as About } from "./main/about.md";
 
-let aboutTitle = "About";
-let aboutDescription = "Index";
-let aboutPermalink = `${Astro.site.toString()}about`;
+const thisTitle = "About";
+const thisDescription = "Index";
+const thisPermalink = `${Astro.site.toString()}about`;
 ---
 
 <html lang="en">
   <head>
     <BaseHeader
-      pageTitle={aboutTitle}
-      pageDescription={aboutDescription}
-      pagePermalink={aboutPermalink}
+      pageTitle={thisTitle}
+      pageDescription={thisDescription}
+      pagePermalink={thisPermalink}
     />
   </head>
   <body>

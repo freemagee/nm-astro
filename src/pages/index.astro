@@ -5,9 +5,9 @@ import Nav from "@components/Nav";
 import HomeLatestPost from "@components/HomeLatestPost";
 import { Content as Home } from "./main/index.md";
 
-const indexTitle = "Index";
-const indexDescription = "The index of the blog";
-const indexPermalink = "";
+const thisTitle = "Index";
+const thisDescription = "The index of the blog";
+const thisPermalink = "";
 
 const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allPosts: IPost[] = allMarkdownPosts
@@ -27,9 +27,9 @@ const latestPost = allPosts.slice(0, 1)[0];
 <html lang="en">
   <head>
     <BaseHeader
-      pageTitle={indexTitle}
-      pageDescription={indexDescription}
-      pagePermalink={indexPermalink}
+      pageTitle={thisTitle}
+      pageDescription={thisDescription}
+      pagePermalink={thisPermalink}
     />
   </head>
   <body>

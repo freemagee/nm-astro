@@ -3,18 +3,22 @@ import BaseHeader from "@components/BaseHeader";
 import Nav from "@components/Nav";
 import { IFrontmatter } from "@typings";
 
+const thisTitle = "All post tags";
+const thisDescription = "All post tags";
+const thisPermalink = `${Astro.site.toString()}tags`;
+
 const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allTags = [
-  ...new Set(allMarkdownPosts.map((p) => p.frontmatter.tags).flat()),
+  ...new Set(allMarkdownPosts.map((p) => p.frontmatter.tags).flat())
 ];
 ---
 
 <html lang="en">
   <head>
     <BaseHeader
-      pageTitle={"All tags"}
-      pageDescription={"all tags"}
-      pagePermalink={""}
+      pageTitle={thisTitle}
+      pageDescription={thisDescription}
+      pagePermalink={thisPermalink}
     />
   </head>
   <body>
