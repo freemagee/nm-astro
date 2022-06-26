@@ -1,0 +1,29 @@
+---
+import BaseHeader from "@components/BaseHeader";
+import Nav from "@components/Nav";
+import { IFrontmatter } from "@typings";
+
+export async function getStaticPaths() {
+  const allMarkdownPosts = await Astro.glob<IFrontmatter>("../posts/*.md");
+  const allCategories = [
+    ...new Set(allMarkdownPosts.map((p) => p.frontmatter.categories).flat()),
+  ];
+  return allCategories.map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params as { category: string };
+---
+
+<html lang="en">
+  <head>
+    <BaseHeader
+      pageTitle={`All posts for the '${category}' category`}
+      pageDescription={category}
+      pagePermalink={""}
+    />
+  </head>
+  <body>
+    <Nav />
+    <p>{category}</p>
+  </body>
+</html>
