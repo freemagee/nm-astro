@@ -1,0 +1,23 @@
+---
+import { SITE } from "@config";
+import BaseHead from "@components/BaseHead";
+import BaseLayout from "./BaseLayout.astro";
+import { IPage } from "@typings";
+
+const { content } = Astro.props as IPage;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead
+      title={content?.title ? `${SITE.title} | ${content.title}` : SITE.title}
+      description={content?.description
+        ? content.description
+        : SITE.description}
+      permalink={content?.permalink ? content.permalink : SITE.url}
+    />
+  </head>
+  <BaseLayout>
+    <slot />
+  </BaseLayout>
+</html>

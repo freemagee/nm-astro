@@ -1,5 +1,5 @@
 ---
-import BaseHeader from "@components/BaseHeader";
+import BaseHead from "@components/BaseHead";
 import Nav from "@components/Nav";
 import { IFrontmatter } from "@typings";
 
@@ -16,10 +16,10 @@ const { tag } = Astro.params as { tag: string };
 
 <html lang="en">
   <head>
-    <BaseHeader
-      pageTitle={`Tags - All posts tagged '${tag}'`}
-      pageDescription={tag}
-      pagePermalink={""}
+    <BaseHead
+      title={`Tags - All posts tagged '${tag}'`}
+      description={tag}
+      permalink={""}
     />
   </head>
   <body>

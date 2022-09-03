@@ -1,5 +1,5 @@
 ---
-import BaseHeader from "@components/BaseHeader";
+import BaseHead from "@components/BaseHead";
 import Nav from "@components/Nav";
 import { IFrontmatter } from "@typings";
 
@@ -15,10 +15,10 @@ const allTags = [
 
 <html lang="en">
   <head>
-    <BaseHeader
-      pageTitle={thisTitle}
-      pageDescription={thisDescription}
-      pagePermalink={thisPermalink}
+    <BaseHead
+      title={thisTitle}
+      description={thisDescription}
+      permalink={thisPermalink}
     />
   </head>
   <body>

@@ -1,5 +1,5 @@
 ---
-import BaseHeader from "@components/BaseHeader";
+import BaseHead from "@components/BaseHead";
 import Nav from "@components/Nav";
 import { AstroPostContent } from "@typings";
 
@@ -10,11 +10,7 @@ const { title, description, date, url } = content as AstroPostContent;
 
 <html lang="en">
   <head>
-    <BaseHeader
-      pageTitle={title}
-      pageDescription={description}
-      pagePermalink={url}
-    />
+    <BaseHead {title} {description} permalink={url} />
   </head>
   <body>
     <Nav />

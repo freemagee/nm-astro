@@ -1,5 +1,5 @@
 ---
-import BaseHeader from "@components/BaseHeader";
+import BaseHead from "@components/BaseHead";
 import Nav from "@components/Nav";
 import { IFrontmatter } from "@typings";
 
@@ -16,10 +16,10 @@ const { category } = Astro.params as { category: string };
 
 <html lang="en">
   <head>
-    <BaseHeader
-      pageTitle={`All posts for the '${category}' category`}
-      pageDescription={category}
-      pagePermalink={""}
+    <BaseHead
+      title={`All posts for the '${category}' category`}
+      description={category}
+      permalink={""}
     />
   </head>
   <body>

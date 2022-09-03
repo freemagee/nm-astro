@@ -1,6 +1,6 @@
 ---
 import { IFrontmatter, IPost } from "@typings";
-import BaseHeader from "@components/BaseHeader";
+import BaseHead from "@components/BaseHead";
 import PostPreview from "@components/PostPreview";
 import Nav from "@components/Nav";
 
@@ -23,10 +23,10 @@ const allPosts: IPost[] = allMarkdownPosts
 
 <html lang="en">
   <head>
-    <BaseHeader
-      pageTitle={thisTitle}
-      pageDescription={thisDescription}
-      pagePermalink={thisPermalink}
+    <BaseHead
+      title={thisTitle}
+      description={thisDescription}
+      permalink={thisPermalink}
     />
   </head>
   <body>

@@ -1,31 +1,27 @@
 import { FC } from "react";
 import { IMeta } from "@typings";
 
-const BaseHeader: FC<IMeta> = ({
-  pageTitle,
-  pageDescription,
-  pagePermalink,
-}) => {
+const BaseHead: FC<IMeta> = ({ title, description, permalink }) => {
   return (
     <>
-      <title>{pageTitle}</title>
-      <meta name="title" content={pageTitle} />
-      <meta name="description" content={pageDescription} />
+      <title>{title}</title>
+      <meta name="title" content={title} />
+      <meta name="description" content={description} />
 
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={pagePermalink} />
-      <meta property="og:title" content={pageTitle} />
-      <meta property="og:description" content={pageDescription} />
+      <meta property="og:url" content={permalink} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content="https://astro.build/social.png?v=1" />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={pagePermalink} />
-      <meta property="twitter:title" content={pageTitle} />
-      <meta property="twitter:description" content={pageDescription} />
+      <meta property="twitter:url" content={permalink} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
       <meta
         property="twitter:image"
         content="https://astro.build/social.png?v=1"
@@ -40,4 +36,4 @@ const BaseHeader: FC<IMeta> = ({
   );
 };
 
-export default BaseHeader;
+export default BaseHead;
