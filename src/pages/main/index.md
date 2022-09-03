@@ -1,8 +1,7 @@
 ---
-title: "Neil Magee"
-date: 2018-09-27T16:30:00+01:00
+title: "Home Intro"
 ---
 
-We are all on an adventure of daily learning. This journey happens to belong to a front-end developer, [Neil Magee](https://neilmagee.com).
+Hi, I am Neil Magee, a Senior Software Engineer, based in the UK.
 
-In an attempt to catalogue and not forget what has been learnt, this blog will record it for the future.
+I am frontend focused, mainly developing React apps. I have expertise in TypeScript/JavaScript, S/CSS and accessible HTML amongst other skills.
