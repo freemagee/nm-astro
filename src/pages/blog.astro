@@ -1,12 +1,13 @@
 ---
 import { IFrontmatter, IPost } from "@typings";
-import BaseHead from "@components/BaseHead";
+import DefaultLayout from "@layouts/Default.astro";
 import PostPreview from "@components/PostPreview";
-import Nav from "@components/Nav";
 
-const thisTitle = "Blog";
-const thisDescription = "The blog";
-const thisPermalink = `${Astro.site.toString()}blog`;
+import "../styles/global.css";
+
+const title = "Blog";
+const description = "The blog";
+const permalink = `${Astro.site.toString()}blog`;
 
 const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allPosts: IPost[] = allMarkdownPosts
@@ -21,24 +22,12 @@ const allPosts: IPost[] = allMarkdownPosts
   .sort((a, b) => b.date.valueOf() - a.date.valueOf());
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title={thisTitle}
-      description={thisDescription}
-      permalink={thisPermalink}
-    />
-  </head>
-  <body>
-    <Nav />
-    <main>
-      <section>
-        <h1>{thisTitle}</h1>
-        <p>{thisDescription}</p>
-      </section>
-      <section aria-label="Blog post list">
-        {allPosts.map((post) => <PostPreview post={post} />)}
-      </section>
-    </main>
-  </body>
-</html>
+<DefaultLayout content={{ title, description, permalink }}>
+  <section>
+    <h1>{title}</h1>
+    <p>{description}</p>
+  </section>
+  <section aria-label="Blog post list">
+    {allPosts.map((post) => <PostPreview post={post} />)}
+  </section>
+</DefaultLayout>

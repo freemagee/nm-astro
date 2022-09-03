@@ -1,24 +1,13 @@
 ---
-import BaseHead from "@components/BaseHead";
-import Nav from "@components/Nav";
+import DefaultLayout from "@layouts/Default.astro";
 import { Content as About } from "./main/about.md";
 
-const thisTitle = "About";
-const thisDescription = "Index";
-const thisPermalink = `${Astro.site.toString()}about`;
+import "../styles/global.css";
+
+const title = "About";
+const permalink = `${Astro.site.toString()}about`;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title={thisTitle}
-      description={thisDescription}
-      permalink={thisPermalink}
-    />
-  </head>
-  <body>
-    <Nav />
-
-    <About />
-  </body>
-</html>
+<DefaultLayout content={{ title, permalink }}>
+  <About />
+</DefaultLayout>

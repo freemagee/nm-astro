@@ -1,8 +1,6 @@
 ---
 import { IFrontmatter, IPost } from "@typings";
 import DefaultLayout from "@layouts/Default.astro";
-// import BaseHead from "@components/BaseHead";
-import Nav from "@components/Nav";
 import HomeLatestPost from "@components/HomeLatestPost";
 import Home from "@components/Home.astro";
 
@@ -24,9 +22,6 @@ const latestPost = allPosts.slice(0, 1)[0];
 ---
 
 <DefaultLayout>
-  <Nav />
-
   <Home />
-
   <HomeLatestPost post={latestPost} />
 </DefaultLayout>

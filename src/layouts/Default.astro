@@ -10,7 +10,7 @@ const { content } = Astro.props as IPage;
 <html lang="en">
   <head>
     <BaseHead
-      title={content?.title ? `${SITE.title} | ${content.title}` : SITE.title}
+      title={content?.title ? `${content.title} | ${SITE.title}` : SITE.title}
       description={content?.description
         ? content.description
         : SITE.description}
