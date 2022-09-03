@@ -15,7 +15,8 @@
     "paths": {
       "@typings": ["src/typings/index"],
       "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@config": ["src/config.ts"]
     }
   }
 }
