@@ -3,6 +3,8 @@ import BaseHead from "@components/BaseHead";
 import Nav from "@components/Nav";
 import { AstroPostContent } from "@typings";
 
+import "../styles/global.css";
+
 const { content } = Astro.props;
 // ! typing Astro content as IPostProps does not work. date prop is a string not a Date as expected.
 const { title, description, date, url } = content as AstroPostContent;
