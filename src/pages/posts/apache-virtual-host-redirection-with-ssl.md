@@ -15,7 +15,7 @@ During my day job I have been administering a CentOS based virtual server hosted
 
 So I thought I would challenge myself a bit and make the jump to Digital Ocean and take more control of my own server. I wanted to be able to make any sites I run use SSL via [Let's Encrypt](https://letsencrypt.org/). This was not possible with my old host, as they had a more traditional "buy a certificate" business model and I could not administer the server to install Certbot.
 
-After setting this new server up and getting **neilmagee.com** served on port 80, I used Let's Encrypt to generate some certs for the `www` and `non-www` versions of the sites (_Why? See [notes](#notes) at end of article_). This worked well, and I could now access https://neilmagee.com and https://www.neilmagee.com. My goal was to redirect all traffic (http{s} and www) to my canonical domain, https://neilmagee.com.
+After setting this new server up and getting **neilmagee.com** served on port 80, I used Let's Encrypt to generate some certs for the `www` and `non-www` versions of the sites (_Why? See [notes](#notes) at end of article_). This worked well, and I could now access https://neilmagee.com and https://www.neilmagee.com. My goal was to redirect all traffic (http/s and www) to my canonical domain, https://neilmagee.com.
 
 <!--more-->
 
