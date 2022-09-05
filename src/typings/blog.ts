@@ -18,5 +18,5 @@ export interface IPostProps {
   post: IPost;
 }
 
-// Refer to PostLayout.astro for usage
+// Refer to Post.astro for usage
 export type AstroPostContent = Omit<IPost, "date"> & { date: string };

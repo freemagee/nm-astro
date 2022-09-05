@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Authentication vs. Authorisation"
 date: 2019-04-09T12:26:24+01:00
 description: ""

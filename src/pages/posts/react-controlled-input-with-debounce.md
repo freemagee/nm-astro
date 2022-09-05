@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "React controlled input with debounce"
 date: 2020-03-02T11:31:54+00:00
 description: "How to write a controlled input in React with debounce effect"

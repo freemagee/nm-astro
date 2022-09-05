@@ -1,6 +1,6 @@
 ---
 import BaseHead from "@components/BaseHead";
-import Nav from "@components/Nav";
+import BaseLayout from "@components/BaseLayout.astro";
 import { AstroPostContent } from "@typings";
 
 import "../styles/global.css";
@@ -14,10 +14,9 @@ const { title, description, date, url } = content as AstroPostContent;
   <head>
     <BaseHead {title} {description} permalink={url} />
   </head>
-  <body>
-    <Nav />
+  <BaseLayout>
     <h1>{title}</h1>
     <slot />
     <p>Written on: {new Date(date).toDateString()}</p>
-  </body>
+  </BaseLayout>
 </html>

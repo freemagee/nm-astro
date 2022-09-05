@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Controlling Tailwindcss"
 date: 2019-08-08T14:49:02+01:00
 description: "What Tailwindcss config settings can control CSS bundle file size"

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Controlled inputs and performance"
 date: 2019-06-04T09:48:31+01:00
 description: "The performance costs of using React controlled inputs"

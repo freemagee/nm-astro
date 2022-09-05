@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "PHP The right way"
 date: 2018-11-21T16:28:33+00:00
 description: "Learning some PHP best practices for security and linting"

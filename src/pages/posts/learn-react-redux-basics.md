@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "The basics of React Redux"
 date: 2019-05-20T16:39:16+01:00
 description: "An example of using React Redux in a basic React app"

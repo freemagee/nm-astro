@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Editor config is still hard"
 date: 2018-11-14T11:16:00+00:00
 description: "Vue, ESLint and Prettier config can still be hard to get right"

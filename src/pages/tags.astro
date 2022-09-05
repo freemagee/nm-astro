@@ -1,11 +1,10 @@
 ---
-import BaseHead from "@components/BaseHead";
-import Nav from "@components/Nav";
+import DefaultLayout from "@layouts/Default.astro";
 import { IFrontmatter } from "@typings";
 
-const thisTitle = "All post tags";
-const thisDescription = "All post tags";
-const thisPermalink = `${Astro.site.toString()}tags`;
+const title = "All post tags";
+const description = "All post tags";
+const permalink = `${Astro.site.toString()}tags`;
 
 const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allTags = [
@@ -13,16 +12,6 @@ const allTags = [
 ];
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title={thisTitle}
-      description={thisDescription}
-      permalink={thisPermalink}
-    />
-  </head>
-  <body>
-    <Nav />
-    {allTags.map(tag => <a href={`/tags/${tag}/`}>{tag}</a>)}
-  </body>
-</html>
+<DefaultLayout content={{ title, description, permalink }}>
+  {allTags.map(tag => <a href={`/tags/${tag}/`}>{tag}</a>)}
+</DefaultLayout>

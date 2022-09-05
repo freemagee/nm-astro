@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "React Redux is pretty great!"
 date: 2019-06-25T10:17:37+01:00
 description: "How great is React Redux? Answer: pretty great!"

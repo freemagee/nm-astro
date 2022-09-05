@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Resolve eslint and prettier conflicts"
 date: 2019-02-12T10:07:40+00:00
 description: "How to resolve eslint and prettier config conflicts"

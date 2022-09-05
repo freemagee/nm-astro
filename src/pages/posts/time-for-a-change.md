@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Time for a change"
 date: 2021-05-16T14:13:30+01:00
 description: "Personal projects and optimising development time"

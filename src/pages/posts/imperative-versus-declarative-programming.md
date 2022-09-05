@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Declarative vs. Imperative programming"
 date: 2019-09-09T18:11:45+01:00
 description: "The distinction between declarative and imperative programming"

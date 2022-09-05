@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Hugo content organisation"
 date: 2020-07-04T12:42:26.486Z
 description: "How to organise content in your Hugo project"

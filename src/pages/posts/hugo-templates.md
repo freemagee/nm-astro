@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Hugo template logic"
 date: 2018-10-08T14:54:52+01:00
 description: "Hugo theme tweaks and tricks"

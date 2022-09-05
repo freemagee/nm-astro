@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Get Jest working with Babel 7"
 date: 2019-01-22T09:32:32+00:00
 description: "How to get Jest to work with Babel 7 so you can use ES6 JavaScript features"

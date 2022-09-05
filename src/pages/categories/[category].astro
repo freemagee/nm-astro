@@ -1,6 +1,5 @@
 ---
-import BaseHead from "@components/BaseHead";
-import Nav from "@components/Nav";
+import DefaultLayout from "@layouts/Default.astro";
 import { IFrontmatter } from "@typings";
 
 export async function getStaticPaths() {
@@ -12,18 +11,11 @@ export async function getStaticPaths() {
 }
 
 const { category } = Astro.params as { category: string };
+const title = `All posts for the '${category}' category`;
+const description = category;
+const permalink = "";
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title={`All posts for the '${category}' category`}
-      description={category}
-      permalink={""}
-    />
-  </head>
-  <body>
-    <Nav />
-    <p>{category}</p>
-  </body>
-</html>
+<DefaultLayout content={{ title, description, permalink }}>
+  <p>{category}</p>
+</DefaultLayout>

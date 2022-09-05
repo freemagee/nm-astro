@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Update state from props in React"
 date: 2019-01-08T11:11:05+00:00
 description: "How to use getDerivedStateFromProps for React form controls"

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "React Prevent Re-renders"
 date: 2018-11-07T09:26:33Z
 description: "How to improve React rendering performance by preventing unnecessary renders"

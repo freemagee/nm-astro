@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Material UI theming and style overrides - Part 4"
 date: 2019-08-02T14:49:47+01:00
 description: "How to theme and style Material UI components in a React app - Part 4"

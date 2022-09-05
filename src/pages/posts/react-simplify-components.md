@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Simplify React components"
 date: 2019-01-09T17:04:41+00:00
 description: "How to simplify React components by using getDerivedStateFromProps"

@@ -1,11 +1,10 @@
 ---
-import BaseHead from "@components/BaseHead";
-import Nav from "@components/Nav";
+import DefaultLayout from "@layouts/Default.astro";
 import { IFrontmatter } from "@typings";
 
-const thisTitle = "Categories";
-const thisDescription = "Categories";
-const thisPermalink = `${Astro.site.toString()}categories`;
+const title = "Categories";
+const description = "Categories";
+const permalink = `${Astro.site.toString()}categories`;
 
 const allMarkdownPosts = await Astro.glob<IFrontmatter>("./posts/*.md");
 const allCategories = [
@@ -13,16 +12,6 @@ const allCategories = [
 ];
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead
-      title={thisTitle}
-      description={thisDescription}
-      permalink={thisPermalink}
-    />
-  </head>
-  <body>
-    <Nav />
-    {allCategories.map(category => <a href={`/categories/${category}/`}>{category}</a>)}
-  </body>
-</html>
+<DefaultLayout content={{ title, description, permalink }}>
+  {allCategories.map(category => <a href={`/categories/${category}/`}>{category}</a>)}
+</DefaultLayout>

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Hugo Variables"
 date: 2018-10-11T12:39:12+01:00
 description: "How to concatenate strings in golang in your Hugo themes"

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Hugo theme improved pagination"
 date: 2019-07-18T17:01:21+01:00
 description: "How to do pagination in your Hugo theme"

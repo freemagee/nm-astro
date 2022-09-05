@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Tailwindcss configs"
 date: 2020-01-23T10:02:46+00:00
 description: "How to control Tailwindcss output file size using config"

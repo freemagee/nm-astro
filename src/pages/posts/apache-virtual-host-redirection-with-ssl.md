@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/PostLayout.astro"
+layout: "../../layouts/Post.astro"
 title: "Apache virtual host redirection with ssl"
 date: 2019-02-04T14:54:05+00:00
 description: "How to use .htaccess to redirect https correctly"
